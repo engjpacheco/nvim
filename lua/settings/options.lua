@@ -11,7 +11,7 @@ set.smartcase = true
 
 set.splitbelow = true
 set.splitright = true
-set.wrap = false
+set.wrap = true
 set.scrolloff = 5
 set.fileencoding = "utf-8"
 set.termguicolors = true
@@ -23,7 +23,7 @@ set.cursorline = true
 
 set.hidden = true
 set.showmode = false
-set.showtabline = 2
+set.showtabline = 0
 set.signcolumn = "yes"
 set.mouse = "a"
 

@@ -173,6 +173,11 @@ return packer.startup(function(use)
     config = get_config("tundra"),
   })
 
+  use({ "chentoast/marks.nvim",
+    requires = {},
+    config = get_config("marks"),
+  })
+
   use({"ThePrimeagen/vim-be-good"})
 
   -- Plugins Ends
