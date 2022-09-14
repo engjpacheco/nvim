@@ -4,8 +4,8 @@ local opts = { noremap = true, silent = true }
 vim.g.mapleader = " "
 
 -- nvim tree mappings --
-map("n", "<leader><leader>", ":NeoTreeFloatToggle<CR>", opts)
-map("n", "<leader>gt", ":NvimTreeFocus<CR>", opts)
+map("n", "<leader>.", "<cmd>NvimTreeToggle<CR>", opts)
+map("n", "<leader>gt", "<cmd>NvimTreeFocus<CR>", opts)
 
 -- barbar mappings --
 
@@ -87,11 +87,11 @@ vim.api.nvim_set_keymap(
 )
 
 -- Personal things
--- map('n', 'S', ':%s/\\<<C-r><C-w>\\>//gI<Left><Left><Left>', opts)
--- map('i', '<C-c', '<Esc>', opts)
--- map('n', '<leader>ps', ':PackerSync<CR>', opts)
--- map('i', 'jk', '<Esc>l', opts)
--- map('i', 'jj', '<Esc>l', opts)
+map('n', 'S', ':%s/\\<<C-r><C-w>\\>//gI<Left><Left><Left>', opts)
+map('i', '<C-c', '<Esc>', opts)
+map('n', '<leader>ps', ':PackerSync<CR>', opts)
+map('i', 'jk', '<Esc>l', opts)
+map('i', 'jj', '<Esc>l', opts)
 map('i', 'aa', '<Esc>A', opts)
 map('i', 'qw', '<Esc>$', opts)
 map('n', '<esc>', ':noh<return><esc>', opts)

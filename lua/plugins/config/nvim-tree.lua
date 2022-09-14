@@ -47,7 +47,8 @@ nvim_tree.setup({
 		adaptive_size = false,
 		mappings = {
 			custom_only = false,
-			list = {},
+			list = {
+      },
 		},
 		number = false,
 		relativenumber = false,

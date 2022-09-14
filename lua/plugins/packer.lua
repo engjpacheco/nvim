@@ -132,12 +132,6 @@ return packer.startup(function(use)
   		config = get_config("lua-dev"),
   	})
 
-  use({
-    "ellisonleao/gruvbox.nvim",
-    requires = {},
-    -- config = get_config("gruvbox"),
-  })
-
   use({ "lukas-reineke/indent-blankline.nvim",
     requires = {},
     config = get_config("indent-blankline"),
@@ -162,18 +156,11 @@ return packer.startup(function(use)
     requires = {},
   })
 
-  use({ "nvim-neo-tree/neo-tree.nvim",
+  use({"kyazdani42/nvim-tree.lua",
     requires = {
-      "nvim-lua/plenary.nvim",
-      "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
+      "kyazdani42/nvim-web-devicons",
     },
-    config = get_config("neo-tree"),
-  })
-
-  use({ "iamcco/markdown-preview.nvim",
-    run = "cd app && npm install",
-    setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" },
+    config = get_config("nvim-tree"),
   })
 
   use({ "TimUntersberger/neogit",
@@ -181,22 +168,12 @@ return packer.startup(function(use)
     config = get_config("neogit"),
   })
 
-  use({ "vimwiki/vimwikiwiki",
-    requires = {},
-  })
-
-  use({"akinsho/toggleterm.nvim",
-    requires = {},
-  })
-
   use({ "sam4llis/nvim-tundra",
     requires = {},
     config = get_config("tundra"),
   })
-  -- use({"williamboman/mason.nvim",
-  --   requires ={},
-  --   config = get_config("mason"),
-  -- })
+
+  use({"ThePrimeagen/vim-be-good"})
 
   -- Plugins Ends
 

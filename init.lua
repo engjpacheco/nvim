@@ -1,5 +1,6 @@
 require("settings")
 require("plugins")
+-- this is the capuccini modyfied theme...
 -- require("cwebster.colors").setup()
 
 local hl = function(thing, opts)
@@ -29,11 +30,11 @@ function ColorMyPencils()
   hl("Normal", {
     bg = "none"
   })
-
+  
   hl("LineNr", {
     fg = "#5eacd3"
   })
-
+  
   hl("netrwDir", {
     fg = "#5eacd3"
   })
