@@ -86,6 +86,9 @@ vim.api.nvim_set_keymap(
   {}
 )
 
+-- Neogit
+map('n', '<leader>gg', '<cmd>Neogit<cr>', opts)
+
 -- Personal things
 map('n', 'S', ':%s/\\<<C-r><C-w>\\>//gI<Left><Left><Left>', opts)
 map('i', '<C-c', '<Esc>', opts)

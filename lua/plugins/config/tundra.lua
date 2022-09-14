@@ -41,3 +41,6 @@ require('nvim-tundra').setup({
 
 vim.opt.background = 'dark'
 vim.cmd('colorscheme tundra')
+
+vim.cmd(':hi clear CursorLine')
+vim.cmd(':hi CursorLine gui=underline cterm=underline ctermfg=None guifg=None')
