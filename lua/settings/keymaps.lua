@@ -28,12 +28,6 @@ map("n", "<A-9>", ":BufferGoto 9<CR>", opts)
 map("n", "<A-0>", ":BufferLast<CR>", opts)
 -- Close buffer
 map("n", "<A-q>", ":BufferClose<CR>", opts)
--- Wipeout buffer
---                 :BufferWipeout<CR>
--- Close commands
---                 :BufferCloseAllButCurrent<CR>
---                 :BufferCloseBuffersLeft<CR>
---                 :BufferCloseBuffersRight<CR>
 -- Magic buffer-picking mode
 map("n", "<C-p>", ":BufferPick<CR>", opts)
 
@@ -93,6 +87,7 @@ map('n', '<leader>gg', '<cmd>Neogit<cr>', opts)
 map('n', 'S', ':%s/\\<<C-r><C-w>\\>//gI<Left><Left><Left>', opts)
 map('i', '<C-c', '<Esc>', opts)
 map('n', '<leader>ps', ':PackerSync<CR>', opts)
+map("n", '<M-x>', ":", opts) -- Meta X like emacs. This is blasphemy....
 map('i', 'jk', '<Esc>l', opts)
 map('i', 'jj', '<Esc>l', opts)
 map('i', 'aa', '<Esc>A', opts)
@@ -102,3 +97,4 @@ map('n', '<f12>', ':!python %<CR>',opts)
 --telekastensten new_note
 --
 map('n', '<leader>nn', ':Telekasten new_note<CR>', opts)
+

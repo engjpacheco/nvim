@@ -1,3 +1,35 @@
+require('luasnip.loaders.from_vscode').lazy_load()
+
+-- vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
+local cmp = require('cmp')
+local luasnip = require('luasnip')
+local select_opts = {behavior = cmp.SelectBehavior.Select}
+
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end
+  },
+  window = {
+    documentation = cmp.config.window.bordered()
+  },
+  formatting = {
+    -- fields = {'menu', 'abbr', 'kind'},
+    format = function(entry, item)
+      local menu_icon = {
+        nvim_lsp = 'λ',
+        luasnip = '⋗',
+        buffer = 'Ω',
+        path = '🖫',
+      }
+
+      item.menu = menu_icon[entry.source.name]
+      return item
+    end,
+  },
+})
+
 local lsp_installer = require("nvim-lsp-installer")
 local lspconfig = require("lspconfig")
 
@@ -162,3 +194,4 @@ lsp_installer.on_server_ready(function(server)
 	-- end
 	server:setup(opts)
 end)
+
