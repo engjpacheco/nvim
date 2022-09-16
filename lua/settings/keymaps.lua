@@ -100,4 +100,4 @@ map('n', '<leader>nn', ':Telekasten new_note<CR>', opts)
 
 --Mind.nvim keymaps
 map('n', '<leader><tab>', ':MindOpenMain<cr>', opts)
-
+map('n', '<leader>mc', ':MindClose<cr>', opts)

@@ -51,7 +51,7 @@ config.options = {
 			enabled = true,
 			colored_indent_levels = true,
 		},
-		dashboard = false,
+		dashboard = true,
 		neogit = true,
 		vim_sneak = false,
 		fern = false,
