@@ -182,7 +182,14 @@ return packer.startup(function(use)
     config = get_config("todo-comments"),
   })
 
-  use({"godlygeek/tabular"})
+  use ({"nvim-telescope/telescope-file-browser.nvim",
+    requires = {},
+    config = get_config("telescope-file-browser"),
+  })
+
+  use({"bbrtj/vim-vorg-md"})
+  
+  use({"matze/vim-move"})
 
   -- Plugins Ends
   if Packer_Bootstrap then

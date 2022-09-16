@@ -40,6 +40,7 @@ map('n', '<C-l>', '<C-W>l', opts)
 -- telescope mappings --
 map("n", "<leader>ff", ":Telescope find_files hidden=true<CR>", opts)
 map("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
+map("n", "<leader>fb", ":Telescope file_browser<CR>", opts)
 
 -- Resize with arrows
 map("n", "<C-S-Up>", ":resize -2<CR>", opts)
@@ -94,6 +95,8 @@ map('i', 'aa', '<Esc>A', opts)
 map('i', 'qw', '<Esc>$', opts)
 map('n', '<esc>', ':noh<return><esc>', opts)
 map('n', '<f12>', ':!python %<CR>',opts)
+map('n', '<f1>', ':Dashboard<CR>',opts)
+map('n', '<f5>', ':CalendarH<CR>',opts)
 
 --telekastensten new_note
 map('n', '<leader>nn', ':Telekasten new_note<CR>', opts)
