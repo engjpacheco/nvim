@@ -94,7 +94,10 @@ map('i', 'aa', '<Esc>A', opts)
 map('i', 'qw', '<Esc>$', opts)
 map('n', '<esc>', ':noh<return><esc>', opts)
 map('n', '<f12>', ':!python %<CR>',opts)
+
 --telekastensten new_note
---
 map('n', '<leader>nn', ':Telekasten new_note<CR>', opts)
+
+--Mind.nvim keymaps
+map('n', '<leader><tab>', ':MindOpenMain<cr>', opts)
 

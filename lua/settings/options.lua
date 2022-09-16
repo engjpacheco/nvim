@@ -23,7 +23,7 @@ set.cursorline = true
 
 set.hidden = true
 set.showmode = false
-set.showtabline = 0
+set.showtabline = 2
 set.signcolumn = "yes"
 set.mouse = "a"
 

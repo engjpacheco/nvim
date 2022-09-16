@@ -46,11 +46,11 @@ return packer.startup(function(use)
     config = get_config("cmp"),
   })
 
-  use({
-    "jose-elias-alvarez/null-ls.nvim",
-    requires = "nvim-lua/plenary.nvim",
-    config = get_config("null-ls"),
-  })
+  -- use({
+  --   "jose-elias-alvarez/null-ls.nvim",
+  --   requires = "nvim-lua/plenary.nvim",
+  --   config = get_config("null-ls"),
+  -- })
 
   use({
     "nvim-treesitter/nvim-treesitter",
@@ -59,12 +59,12 @@ return packer.startup(function(use)
     config = get_config("treesitter"),
   })
 
-  -- use({
-  --   "nvim-treesitter/nvim-treesitter-refactor",
-  --   after = "nvim-treesitter",
-  --   requires = {},
-  --   config = get_config("treesitter-refactor"),
-  -- })
+  use({
+    "nvim-treesitter/nvim-treesitter-refactor",
+    after = "nvim-treesitter",
+    requires = {},
+    config = get_config("treesitter-refactor"),
+  })
 
   use({
     "nvim-telescope/telescope.nvim",
@@ -142,11 +142,6 @@ return packer.startup(function(use)
     config = get_config("colorizer")
   })
 
-  use({ "startup-nvim/startup.nvim",
-    requires = {},
-    config = get_config("startup-config"),
-  })
-
   use({ "renerocksai/telekasten.nvim",
     requires = {},
     config = get_config("telekasten"),
@@ -168,20 +163,23 @@ return packer.startup(function(use)
     config = get_config("neogit"),
   })
 
-  use({ "sam4llis/nvim-tundra",
-    requires = {},
-    config = get_config("tundra"),
-  })
-
-  use({ "chentoast/marks.nvim",
-    requires = {},
-    config = get_config("marks"),
-  })
-
   use({"ThePrimeagen/vim-be-good"})
 
-  -- Plugins Ends
+  use ({"phaazon/mind.nvim",
+    branch = 'v2.2',
+    requires = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require'mind'.setup()
+    end
+  })
+  use ({"folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    config = get_config("todo-comments"),
+  })
 
+  use({"godlygeek/tabular"})
+
+  -- Plugins Ends
   if Packer_Bootstrap then
     require("packer").sync()
   end

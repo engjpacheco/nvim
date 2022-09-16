@@ -1,6 +1,7 @@
 local cmp = require("cmp")
 local luasnip = require("luasnip")
 local lspkind = require("lspkind")
+
 cmp.setup({
 	snippet = {
 		expand = function(args)
@@ -9,6 +10,9 @@ cmp.setup({
 			-- TODO: Add more snippets here.
 		end,
 	},
+  window = {
+    documentation = cmp.config.window.bordered()
+  },
 	mapping = {
 		["<C-j>"] = cmp.mapping.select_prev_item(),
 		["<C-k>"] = cmp.mapping.select_next_item(),
@@ -66,3 +70,4 @@ cmp.setup({
 		ghost_text = true,
 	},
 })
+
