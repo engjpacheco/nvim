@@ -10,8 +10,10 @@ map("n", "<leader>gt", "<cmd>NvimTreeFocus<CR>", opts)
 -- barbar mappings --
 
 -- Move to previous/next
-map("n", "<A-,>", ":BufferPrevious<CR>", opts)
-map("n", "<A-.>", ":BufferNext<CR>", opts)
+-- map("n", "<A-,>", ":BufferPrevious<CR>", opts)
+-- map("n", "<A-.>", ":BufferNext<CR>", opts)
+map("n", "<A-,>", ":bp<CR>", opts)
+map("n", "<A-.>", ":bn<CR>", opts)
 -- Re-order to previous/next
 map("n", "<A-<>", ":BufferMovePrevious<CR>", opts)
 map("n", "<A->>", " :BufferMoveNext<CR>", opts)
@@ -27,7 +29,7 @@ map("n", "<A-8>", ":BufferGoto 8<CR>", opts)
 map("n", "<A-9>", ":BufferGoto 9<CR>", opts)
 map("n", "<A-0>", ":BufferLast<CR>", opts)
 -- Close buffer
-map("n", "<A-q>", ":BufferClose<CR>", opts)
+map("n", "<A-Q>", ":BufferClose<CR>", opts)
 -- Magic buffer-picking mode
 map("n", "<C-p>", ":BufferPick<CR>", opts)
 
@@ -41,6 +43,8 @@ map('n', '<C-l>', '<C-W>l', opts)
 map("n", "<leader>ff", ":Telescope find_files hidden=true<CR>", opts)
 map("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
 map("n", "<leader>fb", ":Telescope file_browser<CR>", opts)
+map("n", "<leader>fr", ":Telescope oldfiles<CR>", opts)
+map("n", "<leader>ht", ":Telescope colorscheme<CR>", opts)
 
 -- Resize with arrows
 map("n", "<C-S-Up>", ":resize -2<CR>", opts)
@@ -49,7 +53,7 @@ map("n", "<C-S-Left>", ":vertical resize -2<CR>", opts)
 map("n", "<C-S-Right>", ":vertical resize +2<CR>", opts)
 
 -- undotree
-map("n", "<leader>u", ":UndotreeToggle<>", opts)
+map("n", "<leader>u", ":UndotreeToggle<cr>", opts)
 
 -- hop
 vim.api.nvim_set_keymap(
@@ -94,9 +98,9 @@ map('i', 'jj', '<Esc>l', opts)
 map('i', 'aa', '<Esc>A', opts)
 map('i', 'qw', '<Esc>$', opts)
 map('n', '<esc>', ':noh<return><esc>', opts)
-map('n', '<f12>', ':!python %<CR>',opts)
 map('n', '<f1>', ':Dashboard<CR>',opts)
 map('n', '<f5>', ':CalendarH<CR>',opts)
+map('n', '<f12>', ':!python %<CR>',opts)
 
 --telekastensten new_note
 map('n', '<leader>nn', ':Telekasten new_note<CR>', opts)

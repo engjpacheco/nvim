@@ -1,7 +1,6 @@
 require("nvim-treesitter.configs").setup({
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
-  ensure_installed = { "javascript", "vue", "typescript", "json", "html", "css", "lua" },
-
+  ensure_installed = { "lua", "python",  },
   -- Install languages synchronously (only applied to `ensure_installed`)
   sync_install = false,
 
@@ -10,7 +9,7 @@ require("nvim-treesitter.configs").setup({
 
   highlight = {
     enable = true,
-    disable = { "c", "rust" },
+    -- disable = { "c", "rust" },
     additional_vim_regex_highlighting = false,
   },
   refactor = {
@@ -18,7 +17,7 @@ require("nvim-treesitter.configs").setup({
     smart_rename = {
       enable = true,
       keymaps = {
-        smart_rename = "grr",
+        smart_rename = "grn",
       },
     },
     navigation = {

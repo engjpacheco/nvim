@@ -34,4 +34,3 @@ set.clipboard = "unnamedplus"
 set.completeopt = "menuone,noselect"
 set.colorcolumn = "81"
 set.conceallevel = 2
-

@@ -17,7 +17,7 @@ dashboard.custom_header = {
 }
 dashboard.custom_center = {
     {icon = '  ',
-    desc = 'Find recent files                        ',
+    desc = 'Find recent files                         ',
     action = 'Telescope oldfiles',
     shortcut = 'SPC f r'},
     {icon = '  ',
@@ -36,10 +36,10 @@ dashboard.custom_center = {
     desc = 'Load new theme                            ',
     action = 'Telescope colorscheme',
     shortcut = 'SPC h t'},
-    {icon = "  ",
-    desc = 'Quit Nvim                                      ',
-    action = "qa",
-    shortcut = 'Q'},
+    -- {icon = "  ",
+    -- desc = 'Quit Nvim                                      ',
+    -- action = "qa",
+    -- shortcut = 'Q'},
     }
 dashboard.custom_footer = { '', "“Make it work, make it right, make it fast.” – Kent Beck" }
 vim.cmd([[

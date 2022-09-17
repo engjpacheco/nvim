@@ -191,6 +191,8 @@ return packer.startup(function(use)
   
   use({"matze/vim-move"})
 
+  use ({'iamcco/markdown-preview.nvim'})
+
   -- Plugins Ends
   if Packer_Bootstrap then
     require("packer").sync()
