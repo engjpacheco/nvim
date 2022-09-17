@@ -108,7 +108,7 @@ map('n', '<f5>', ':CalendarH<CR>',opts)
 map('n', '<f12>', ':!python %<CR>',opts)
 
 --telekastensten new_note
-map('n', '<leader>nn', ':Telekasten new_note<CR>', opts)
+map('n', '<leader>nn', ':Telekasten panel<CR>', opts)
 
 --Mind.nvim keymaps
 map('n', '<leader><tab>', ':MindOpenMain<cr>', opts)
