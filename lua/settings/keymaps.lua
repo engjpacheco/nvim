@@ -90,6 +90,8 @@ map('n', '<leader>gg', '<cmd>Neogit<cr>', opts)
 
 -- Personal things
 map('n', 'S', ':%s/\\<<C-r><C-w>\\>//gI<Left><Left><Left>', opts)
+map('v', '<', '<gv', opts)
+map('v', '>', '>gv', opts)
 map('i', '<C-c', '<Esc>', opts)
 map('n', '<leader>ps', ':PackerSync<CR>', opts)
 map("n", '<M-x>', ":", opts) -- Meta X like emacs. This is blasphemy....
