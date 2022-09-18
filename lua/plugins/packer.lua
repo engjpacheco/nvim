@@ -187,11 +187,17 @@ return packer.startup(function(use)
     config = get_config("telescope-file-browser"),
   })
 
+  use({
+    "akinsho/toggleterm.nvim",
+    requires = {},
+    config = get_config("toggleterm"),
+  })
+
   use({"bbrtj/vim-vorg-md"})
   
   use({"matze/vim-move"})
 
-  use ({'iamcco/markdown-preview.nvim'})
+  use ({'instant-markdown/vim-instant-markdown'})
 
   -- Plugins Ends
   if Packer_Bootstrap then

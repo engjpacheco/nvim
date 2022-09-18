@@ -1,7 +1,7 @@
 -- toggleterm
 require("toggleterm").setup{
-  open_mapping = [[<leader>n]],
-  hide_numbers = false, -- hide the number column in toggleterm buffers
+  open_mapping = [[<leader>/]],
+  hide_numbers = true, -- hide the number column in toggleterm buffers
   start_in_insert = true,
   insert_mappings = false, -- whether or not the open mapping applies in insert mode
   terminal_mappings = true, -- whether or not the open mapping applies in the opened terminals
@@ -42,8 +42,8 @@ function _gccrun_toggle()
   vim.cmd[[3TermExec cmd="%:p:h/%:t:r"]]
 end
 
-vim.api.nvim_set_keymap("", "<F3>", "<cmd>lua _gccomplie_toggle()<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("", "<F4>", "<cmd>lua _gccrun_toggle()<CR>", {noremap = true, silent = true})
+-- vim.api.nvim_set_keymap("", "<F3>", "<cmd>lua _gccomplie_toggle()<CR>", {noremap = true, silent = true})
+-- vim.api.nvim_set_keymap("", "<F4>", "<cmd>lua _gccrun_toggle()<CR>", {noremap = true, silent = true})
 
 local lazygit = Terminal:new({ cmd = "lazygit", count=5, hidden = true })
 function _lazygit_toggle()

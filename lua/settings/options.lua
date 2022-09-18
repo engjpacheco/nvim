@@ -1,5 +1,8 @@
 local set = vim.opt
 
+-- Blink cursor :D
+vim.cmd[[set guicursor+=a:-blinkwait175-blinkoff150-blinkon175]]
+
 set.expandtab = true
 set.smarttab = true
 set.shiftwidth = 2
