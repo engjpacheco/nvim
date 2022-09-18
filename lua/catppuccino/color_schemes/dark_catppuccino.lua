@@ -61,7 +61,7 @@ colors.bg_statusline = colors.bg_alt
 colors.bg_sidebar = colors.bg_alt
 colors.bg_float = colors.bg_alt
 
-colors.bg_visual = util.darken(colors.blue, 0.2)
+colors.bg_visual = util.darken(colors.cyan, 0.3)
 colors.bg_search = util.darken(colors.cyan, 0.3)
 colors.fg_sidebar = colors.fg_alt
 
