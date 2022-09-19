@@ -197,7 +197,10 @@ return packer.startup(function(use)
   
   use({"matze/vim-move"})
 
-  use ({'instant-markdown/vim-instant-markdown'})
+  use ({'instant-markdown/vim-instant-markdown',
+  requires = {},
+  config = get_config("instantmd")
+  })
 
   -- Plugins Ends
   if Packer_Bootstrap then
