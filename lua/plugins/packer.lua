@@ -197,11 +197,10 @@ return packer.startup(function(use)
   
   use({"matze/vim-move"})
 
-  use ({'instant-markdown/vim-instant-markdown',
-  requires = {},
-  config = get_config("instantmd")
-  })
-
+use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+})
   -- Plugins Ends
   if Packer_Bootstrap then
     require("packer").sync()

@@ -29,7 +29,7 @@ map("n", "<A-8>", ":BufferGoto 8<CR>", opts)
 map("n", "<A-9>", ":BufferGoto 9<CR>", opts)
 map("n", "<A-0>", ":BufferLast<CR>", opts)
 -- Close buffer
-map("n", "<A-Q>", ":BufferClose<CR>", opts)
+map("n", "<A-q>", ":BufferClose<CR>", opts)
 -- Magic buffer-picking mode
 map("n", "<C-p>", ":BufferPick<CR>", opts)
 
