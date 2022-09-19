@@ -163,11 +163,6 @@ return packer.startup(function(use)
     config = get_config("nvim-tree"),
   })
 
-  use({ "TimUntersberger/neogit",
-    requires = { "nvim-lua/plenary.nvim" },
-    config = get_config("neogit"),
-  })
-
   use({"ThePrimeagen/vim-be-good"})
 
   use ({"phaazon/mind.nvim",

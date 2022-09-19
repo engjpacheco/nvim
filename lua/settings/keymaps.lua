@@ -85,8 +85,7 @@ vim.api.nvim_set_keymap(
   {}
 )
 
--- Neogit
-map('n', '<leader>gg', '<cmd>Neogit<cr>', opts)
+-- git
 map('n', '<leader>gs', ':Telescope git_status<cr>', opts)
 map('n', '<leader>gc', ':Telescope git_commits<cr>', opts)
 map('n', '<leader>gb', ':Telescope git_branches<cr>', opts)
