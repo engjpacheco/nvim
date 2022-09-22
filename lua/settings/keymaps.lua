@@ -39,6 +39,12 @@ map('n', '<C-j>', '<C-W>j', opts)
 map('n', '<C-k>', '<C-W>k', opts)
 map('n', '<C-l>', '<C-W>l', opts)
 
+-- Move in insert mode like in nirmal mode hjkl:
+map('i', '<C-h>', '<Left>', opts)
+map('i', '<C-j>', '<Down>', opts)
+map('i', '<C-k>', '<Up>', opts)
+map('i', '<C-l>', '<Right>', opts)
+
 -- telescope mappings --
 map("n", "<leader>ff", ":Telescope find_files hidden=true<CR>", opts)
 map("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
