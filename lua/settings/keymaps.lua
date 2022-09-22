@@ -97,7 +97,8 @@ map('v', '>', '>gv', opts)
 map('i', '<C-c', '<Esc>', opts)
 map('n', '<leader>ps', ':PackerSync<CR>', opts)
 map("n", '<M-x>', ":", opts) -- Meta X like emacs. This is blasphemy....
-map("n", '<leader>hrr', ":luafile%", opts) -- Meta X like emacs. This is blasphemy....
+map("n", '<leader>hrr', ":luafile%<CR>", opts)
+map("n", '<leader>cw', ":enew<CR>", opts) -- Meta X like emacs. This is blasphemy....
 map('i', 'jk', '<Esc>l', opts)
 map('i', 'jj', '<Esc>l', opts)
 map('i', 'aa', '<Esc>A', opts)
@@ -116,5 +117,5 @@ map('n', '<leader>mc', ':MindClose<cr>', opts)
 
 -- documents mardown and pdf
 map("n", '<leader>pdf', ":silent !silent  latexpdf % <CR>", opts)
-map("n", '<leader>md', ":MarkdownPreview<CR>", opts) -- Meta X like emacs. This is blasphemy....
+map("n", '<leader>md', ":MarkdownPreview<CR>", opts)
 
