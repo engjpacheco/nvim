@@ -195,7 +195,8 @@ return packer.startup(function(use)
 use({
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
-})
+    config = get_config("markdownpreview"),
+  })
   -- Plugins Ends
   if Packer_Bootstrap then
     require("packer").sync()
