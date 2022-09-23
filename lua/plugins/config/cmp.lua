@@ -48,6 +48,7 @@ cmp.setup({
 		{ name = "luasnip" },
 		{ name = "buffer" },
 		{ name = "path" },
+		{ name = "orgmode" },
 	},
 	formatting = {
 		format = lspkind.cmp_format({
