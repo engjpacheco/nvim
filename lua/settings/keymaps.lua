@@ -114,13 +114,6 @@ map('n', '<f1>', ':Dashboard<CR>',opts)
 map('n', '<f5>', ':CalendarH<CR>',opts)
 map('n', '<f12>', ':!python %<CR>',opts)
 
---telekastensten new_note
-map('n', '<leader>nn', ':Telekasten panel<CR>', opts)
-
---Mind.nvim keymaps
-map('n', '<leader><tab>', ':MindOpenMain<cr>', opts)
-map('n', '<leader>mc', ':MindClose<cr>', opts)
-
 -- documents mardown and pdf
 map("n", '<leader>pdf', ":silent !silent  latexpdf % <CR>", opts)
 map("n", '<leader>md', ":MarkdownPreview<CR>", opts)

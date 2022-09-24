@@ -165,25 +165,25 @@ return packer.startup(function(use)
 
   use({ "dhruvasagar/vim-table-mode" })
 
-use({ "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
-    config = get_config("markdownpreview"),
+  use({ "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+      config = get_config("markdownpreview"),
+    })
+
+  use({ "jakewvincent/mkdnflow.nvim",
+    rocks = 'luautf8', -- Ensures optional luautf8 dependency is installed
+    config = get_config("mkdnflow"),
   })
 
-  -- use({ "jakewvincent/mkdnflow.nvim",
-  --   rocks = 'luautf8', -- Ensures optional luautf8 dependency is installed
-  --   config = get_config("mkdnflow"),
-  -- })
+  use({'nvim-orgmode/orgmode',
+      ft = {'org'},
+      config = get_config("orgmode")
+    })
 
-use({'nvim-orgmode/orgmode',
-    ft = {'org'},
-    config = get_config("orgmode")
+  use({ 'akinsho/org-bullets.nvim',
+    requires = {},
+    config = get_config("orgbullets"),
   })
-
-use({ 'akinsho/org-bullets.nvim',
-  requires = {},
-  config = get_config("orgbullets"),
-})
  
   -- Plugins Ends
   if Packer_Bootstrap then
