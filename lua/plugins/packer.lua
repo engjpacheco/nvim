@@ -163,6 +163,8 @@ return packer.startup(function(use)
   
   use({ "matze/vim-move" })
 
+  use({ "dhruvasagar/vim-table-mode" })
+
 use({ "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
     config = get_config("markdownpreview"),
@@ -178,13 +180,11 @@ use({'nvim-orgmode/orgmode',
     config = get_config("orgmode")
   })
 
-use {'akinsho/org-bullets.nvim', config = function()
-  require('org-bullets').setup{
-  symbols = {
-      headlines = { "⁖", "⁖", "⁖", "⁖" },
-    }
-  }
-end}
+use({ 'akinsho/org-bullets.nvim',
+  requires = {},
+  config = get_config("orgbullets"),
+})
+ 
   -- Plugins Ends
   if Packer_Bootstrap then
     require("packer").sync()

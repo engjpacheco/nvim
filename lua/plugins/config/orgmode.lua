@@ -12,6 +12,6 @@ require'nvim-treesitter.configs'.setup {
 }
 
 require('orgmode').setup({
-  org_agenda_files = {'~/notes/*', '~/.doom.d/notes/*'},
-  org_default_notes_file = '~/Dropbox/org/refile.org',
+  org_agenda_files = {'~/notes/'},
+  org_default_notes_file = '~/notes/org/refile.org',
 })

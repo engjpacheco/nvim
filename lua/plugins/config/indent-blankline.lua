@@ -25,6 +25,7 @@ require("indent_blankline").setup {
     'dashboard',
     'git',
     'markdown',
+    'org',
     'text',
     'terminal',
     'lspinfo',
