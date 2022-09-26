@@ -165,6 +165,8 @@ return packer.startup(function(use)
 
   use({ "dhruvasagar/vim-table-mode" })
 
+  use({ "tentaclius/my-vim-org" })
+
   use({ "iamcco/markdown-preview.nvim",
       run = function() vim.fn["mkdp#util#install"]() end,
       config = get_config("markdownpreview"),
