@@ -117,4 +117,6 @@ map('n', '<f12>', ':!python %<CR>',opts)
 -- documents mardown and pdf
 map("n", '<leader>pdf', ":silent !silent  latexpdf % <CR>", opts)
 map("n", '<leader>md', ":MarkdownPreview<CR>", opts)
+map("n", '<leader>cx', ":MkdnToggleToDo<CR>", opts)
+
 

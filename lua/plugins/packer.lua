@@ -142,7 +142,7 @@ return packer.startup(function(use)
     config = get_config("nvim-tree"),
   })
 
-  use({ "ThePrimeagen/vim-be-good"})
+  -- use({ "ThePrimeagen/vim-be-good"})
 
   use ({ "folke/todo-comments.nvim",
     requires = "nvim-lua/plenary.nvim",
@@ -159,33 +159,50 @@ return packer.startup(function(use)
     config = get_config("toggleterm"),
   })
 
-  use({ "bbrtj/vim-vorg-md" })
-  
   use({ "matze/vim-move" })
 
-  use({ "dhruvasagar/vim-table-mode" })
+  -- use({ "dhruvasagar/vim-table-mode" })
 
-  use({ "tentaclius/my-vim-org" })
-
+  -- use({ "tentaclius/my-vim-org" })
+  --
+-- Markdown plugins for notes and so on.
   use({ "iamcco/markdown-preview.nvim",
       run = function() vim.fn["mkdp#util#install"]() end,
       config = get_config("markdownpreview"),
     })
 
-  use({ "jakewvincent/mkdnflow.nvim",
-    rocks = 'luautf8', -- Ensures optional luautf8 dependency is installed
-    config = get_config("mkdnflow"),
+  use({ "mzlogin/vim-markdown-toc" })
+
+  use({ "nvim-telescope/telescope-media-files.nvim",
+      config = get_config("telescopemediafiles")
   })
 
-  use({'nvim-orgmode/orgmode',
-      ft = {'org'},
-      config = get_config("orgmode")
-    })
-
-  use({ 'akinsho/org-bullets.nvim',
+  use({ "renerocksai/telekasten.nvim",
     requires = {},
-    config = get_config("orgbullets"),
+    config = get_config("telekasten"),
   })
+
+  use({ "bbrtj/vim-vorg-md" })
+
+  -- use({ "jakewvincent/mkdnflow.nvim",
+  --   rocks = 'luautf8', -- Ensures optional luautf8 dependency is installed
+  --   config = get_config("mkdnflow"),
+  -- })
+
+  -- use({'nvim-orgmode/orgmode',
+  --     ft = {'org'},
+  --     config = get_config("orgmode")
+  --   })
+  --
+  -- use({ 'akinsho/org-bullets.nvim',
+  --   requires = {},
+  --   config = get_config("orgbullets"),
+  -- })
+
+  --  use ({ "nvim-neorg/neorg",
+  --      requires = "nvim-lua/plenary.nvim",
+  --      config = get_config("neorg"),
+  --  })
  
   -- Plugins Ends
   if Packer_Bootstrap then

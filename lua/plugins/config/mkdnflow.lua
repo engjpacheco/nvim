@@ -39,10 +39,10 @@ require('mkdnflow').setup({
         end
     },
     to_do = {
-        symbols = {' ', '-', 'X'},
+        symbols = {' ', 'X',}, --'X'
         update_parents = true,
         not_started = ' ',
-        in_progress = '-',
+        -- in_progress = '-',
         complete = 'X'
     },
     tables = {
@@ -55,21 +55,21 @@ require('mkdnflow').setup({
         MkdnEnter = {{'n', 'v'}, '<CR>'},
         MkdnTab = true,
         MkdnSTab = true,
-        MkdnNextLink = {'n', '<Tab>'},
-        MkdnPrevLink = {'n', '<S-Tab>'},
+        -- MkdnNextLink = {'n', '<Tab>'},
+        -- MkdnPrevLink = {'n', '<S-Tab>'},
         MkdnNextHeading = {'n', ']]'},
         MkdnPrevHeading = {'n', '[['},
         MkdnGoBack = {'n', '<BS>'},
-        MkdnGoForward = {'n', '<Del>'},
+        -- MkdnGoForward = {'n', '<Del>'},
         MkdnFollowLink = false, -- see MkdnEnter
         MkdnDestroyLink = {'n', '<M-CR>'},
         MkdnTagSpan = {'v', '<M-CR>'},
-        MkdnMoveSource = {'n', '<F2>'},
+        -- MkdnMoveSource = {'n', '<F2>'},
         MkdnYankAnchorLink = {'n', 'ya'},
         MkdnYankFileAnchorLink = {'n', 'yfa'},
         MkdnIncreaseHeading = {'n', '<M-Up>'},
         MkdnDecreaseHeading = {'n', '<M-Down>'},
-        MkdnToggleToDo = {{'n', 'v'}, '<C-Space>'},
+        MkdnToggleToDo = {{'n', 'v'}, '<leader>t'},
         MkdnNewListItem = false,
         MkdnNewListItemBelowInsert = {'n', '<C-CR>'},
         -- MkdnNewListItemAboveInsert = {'n', 'O'},

@@ -28,25 +28,14 @@ require("toggleterm").setup{
 }
 local Terminal  = require('toggleterm.terminal').Terminal
 
-local gccomplie = Terminal:new({
-	count=3,
-	close_on_exit=true,
-})
-function _gccomplie_toggle()
-  -- gccomplie:toggle()
-  vim.cmd[[w]]
-  vim.cmd[[3TermExec cmd="g++-11 -std=c++17 -O2 -Wall -Wextra -pedantic -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -Wno-unused-result -Wno-sign-conversion -fsanitize=address -fsanitize=undefined -DLOCAL %:r.cpp -o %:r"]]
-end
-
-function _gccrun_toggle()
-  vim.cmd[[3TermExec cmd="%:p:h/%:t:r"]]
-end
-
--- vim.api.nvim_set_keymap("", "<F3>", "<cmd>lua _gccomplie_toggle()<CR>", {noremap = true, silent = true})
--- vim.api.nvim_set_keymap("", "<F4>", "<cmd>lua _gccrun_toggle()<CR>", {noremap = true, silent = true})
-
 local lazygit = Terminal:new({ cmd = "lazygit", count=5, hidden = true })
 function _lazygit_toggle()
   lazygit:toggle()
 end
 vim.api.nvim_set_keymap("n", "<F2>", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
+
+local python = Terminal:new({ cmd = "python", count=5, hidden = true })
+function _python_toggle()
+  python:toggle()
+end
+vim.api.nvim_set_keymap("n", "<leader><leader>p", "<cmd>lua _python_toggle()<CR>", {noremap = true, silent = true})

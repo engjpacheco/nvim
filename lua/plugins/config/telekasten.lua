@@ -1,4 +1,4 @@
-local home = vim.fn.expand("~/Desktop/notes")
+local home = vim.fn.expand("~/notes")
 -- NOTE for Windows users:
 -- - don't use Windows
 -- - try WSL2 on Windows and pretend you're on Linux
@@ -71,7 +71,7 @@ require('telekasten').setup({
     plug_into_calendar = true,
     calendar_opts = {
         -- calendar week display mode: 1 .. 'WK01', 2 .. 'WK 1', 3 .. 'KW01', 4 .. 'KW 1', 5 .. '1'
-        weeknm = 4,
+        weeknm = 3,
         -- use monday as first day of week: 1 .. true, 0 .. false
         calendar_monday = 1,
         -- calendar mark: where to put mark for marked days: 'left', 'right', 'left-fit'
@@ -83,7 +83,7 @@ require('telekasten').setup({
     insert_after_inserting = true,
 
     -- tag notation: '#tag', ':tag:', 'yaml-bare'
-    tag_notation = "#tag",
+    tag_notation = ":tag:",
 
     -- command palette theme: dropdown (window) or ivy (bottom panel)
     command_palette_theme = "ivy",
