@@ -100,7 +100,7 @@ map('n', '<leader>gb', ':Telescope git_branches<cr>', opts)
 map('n', 'S', ':%s/\\<<C-r><C-w>\\>//gI<Left><Left><Left>', opts)
 map('v', '<', '<gv', opts)
 map('v', '>', '>gv', opts)
--- map('i', '<C-c', '<Esc>', opts)
+map('i', '<C-c', '<Esc>', opts)
 map('n', '<leader>ps', ':PackerSync<CR>', opts)
 map("n", '<M-x>', ":", opts) -- Meta X like emacs. This is blasphemy....
 map("n", '<leader>hrr', ":luafile%<CR>", opts)
