@@ -18,6 +18,8 @@ es muy "minimalista" por lo cual requerira de algunas modificaciones.
 
 *thats it, im ready to go.*
 
-# [Notas Personales.](202210020938_notas-personales..md)
+# Notas Personales.
+click [aqui](202210020921_notas-personales) para ir.
 
-# [Notas de trabajo.](202210020938_notas-de-trabajo..md)
+# Notas de trabajo.
+click [aqui](202210020938_notas-de-trabajo..md) para ir.
