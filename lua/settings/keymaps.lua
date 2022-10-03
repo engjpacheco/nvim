@@ -118,5 +118,6 @@ map('n', '<f12>', ':!python %<CR>',opts)
 map("n", '<leader>pdf', ":silent !silent  latexpdf % <CR>", opts)
 map("n", '<leader>md', ":MarkdownPreview<CR>", opts)
 map("n", '<leader>cx', ":MkdnToggleToDo<CR>", opts)
+map("n", '<leader>ww', ":e ~/notes/index.md<CR>", opts)
 
 

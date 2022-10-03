@@ -28,21 +28,21 @@ require('mkdnflow').setup({
     links = {
         style = 'markdown',
         name_is_source = false,
-        conceal = false,
+        conceal = true,
         implicit_extension = nil,
         transform_implicit = false,
         transform_explicit = function(text)
             text = text:gsub(" ", "-")
             text = text:lower()
-            text = os.date('%Y-%m-%d_')..text
+            text = os.date('%Y%m%d%I%M_')..text
             return(text)
         end
     },
     to_do = {
-        symbols = {' ', 'X',}, --'X'
+        symbols = {' ', '-', 'X'},
         update_parents = true,
         not_started = ' ',
-        -- in_progress = '-',
+        in_progress = '-',
         complete = 'X'
     },
     tables = {
@@ -52,27 +52,27 @@ require('mkdnflow').setup({
         auto_extend_cols = false
     },
     mappings = {
-        MkdnEnter = {{'n', 'v'}, '<CR>'},
-        MkdnTab = true,
-        MkdnSTab = true,
-        -- MkdnNextLink = {'n', '<Tab>'},
-        -- MkdnPrevLink = {'n', '<S-Tab>'},
+        MkdnEnter = {{'n', 'i', 'v'}, '<CR>'},
+        MkdnTab = false,
+        MkdnSTab = false,
+        MkdnNextLink = {'n', '<Tab>'},
+        MkdnPrevLink = {'n', '<S-Tab>'},
         MkdnNextHeading = {'n', ']]'},
         MkdnPrevHeading = {'n', '[['},
         MkdnGoBack = {'n', '<BS>'},
-        -- MkdnGoForward = {'n', '<Del>'},
-        MkdnFollowLink = false, -- see MkdnEnter
+        MkdnGoForward = {'n', '<Del>'},
+        MkdnFollowLink = {'n', '<C-l>'}, -- see MkdnEnter
         MkdnDestroyLink = {'n', '<M-CR>'},
         MkdnTagSpan = {'v', '<M-CR>'},
-        -- MkdnMoveSource = {'n', '<F2>'},
+        MkdnMoveSource = {'n', '<F2>'},
         MkdnYankAnchorLink = {'n', 'ya'},
         MkdnYankFileAnchorLink = {'n', 'yfa'},
-        MkdnIncreaseHeading = {'n', '<M-Up>'},
-        MkdnDecreaseHeading = {'n', '<M-Down>'},
-        MkdnToggleToDo = {{'n', 'v'}, '<leader>t'},
+        MkdnIncreaseHeading = {'n', '+'},
+        MkdnDecreaseHeading = {'n', '-'},
+        MkdnToggleToDo = {{'n', 'v'}, '<C-Space>'},
         MkdnNewListItem = false,
-        MkdnNewListItemBelowInsert = {'n', '<C-CR>'},
-        -- MkdnNewListItemAboveInsert = {'n', 'O'},
+        MkdnNewListItemBelowInsert = {'n', 'o'},
+        MkdnNewListItemAboveInsert = {'n', 'O'},
         MkdnExtendList = false,
         MkdnUpdateNumbering = {'n', '<leader>nn'},
         MkdnTableNextCell = {'i', '<Tab>'},
