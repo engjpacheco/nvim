@@ -171,11 +171,6 @@ return packer.startup(function(use)
       config = get_config("telescopemediafiles")
   })
 
-  use({ "renerocksai/telekasten.nvim",
-    requires = {},
-    config = get_config("telekasten"),
-  })
-
   use({ "bbrtj/vim-vorg-md" })
 
   use({ "jakewvincent/mkdnflow.nvim",

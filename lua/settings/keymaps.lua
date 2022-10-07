@@ -120,4 +120,3 @@ map("n", '<leader>md', ":MarkdownPreview<CR>", opts)
 map("n", '<leader>cx', ":MkdnToggleToDo<CR>", opts)
 map("n", '<leader>ww', ":e ~/notes/index.md<CR>", opts)
 
-
