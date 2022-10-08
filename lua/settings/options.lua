@@ -37,6 +37,7 @@ set.clipboard = "unnamedplus"
 set.completeopt = "menuone,noselect"
 set.colorcolumn = "81"
 set.conceallevel = 2
+set.autochdir = true
 
 -- Disable loading certain plugins
 

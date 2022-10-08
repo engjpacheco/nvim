@@ -1,5 +1,6 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
+local os = vim.loop.os_uname().sysname 
 
 vim.g.mapleader = " "
 
@@ -10,10 +11,8 @@ map("n", "<leader>gt", "<cmd>NvimTreeFocus<CR>", opts)
 -- barbar mappings --
 
 -- Move to previous/next
--- map("n", "<A-,>", ":BufferPrevious<CR>", opts)
--- map("n", "<A-.>", ":BufferNext<CR>", opts)
-map("n", "<A-,>", ":bp<CR>", opts)
-map("n", "<A-.>", ":bn<CR>", opts)
+map("n", "<A-,>", ":BufferPrevious<CR>", opts)
+map("n", "<A-.>", ":BufferNext<CR>", opts)
 -- Re-order to previous/next
 map("n", "<A-<>", ":BufferMovePrevious<CR>", opts)
 map("n", "<A->>", " :BufferMoveNext<CR>", opts)
@@ -104,7 +103,7 @@ map('i', '<C-c', '<Esc>', opts)
 map('n', '<leader>ps', ':PackerSync<CR>', opts)
 map("n", '<M-x>', ":", opts) -- Meta X like emacs. This is blasphemy....
 map("n", '<leader>hrr', ":luafile%<CR>", opts)
-map("n", '<leader>cw', ":enew<CR>", opts) -- Meta X like emacs. This is blasphemy....
+map("n", '<C-n>', ":enew<CR>", opts) -- Meta X like emacs. This is blasphemy....
 map('i', 'jk', '<Esc>l', opts)
 map('i', 'jj', '<Esc>l', opts)
 map('i', 'aa', '<Esc>A', opts)
@@ -118,5 +117,11 @@ map('n', '<f12>', ':!python %<CR>',opts)
 map("n", '<leader>pdf', ":silent !silent  latexpdf % <CR>", opts)
 map("n", '<leader>md', ":MarkdownPreview<CR>", opts)
 map("n", '<leader>cx', ":MkdnToggleToDo<CR>", opts)
-map("n", '<leader>ww', ":e ~/notes/index.md<CR>", opts)
+
+if os == "Windows_NT" then
+  map("n", '<leader>ww', ":e ~/Appdata/local/nvim/notes/index.md<CR> :cd<CR>", opts)
+elseif os == "Linux" then
+  map("n", '<leader>ww', ":e ~/.config/nvim/notes/index.md<CR> :cd<CR>", opts)
+end
+
 

@@ -72,7 +72,7 @@ return packer.startup(function(use)
 
   use({ "tpope/vim-surround",
     requires = {},
-    config = get_config("vim-surround")
+    -- config = getconfig("vim-surround")
   })
 
   use({ "nvim-lualine/lualine.nvim",
