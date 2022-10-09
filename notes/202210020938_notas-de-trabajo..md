@@ -6,3 +6,9 @@
 
 1. Coneccion a ***CompactLogix*** con python.
 2. Revizion de produccion diara.
+
+# Manit
+
+## Rastreabilidad LVL1.
+Aqui muestro un pequeño diagrama de flujo donde se muestra el proceso de 
+[Rastreabilidad nivel 1](202210090508_rastreabilidad-nivel-1.md)
