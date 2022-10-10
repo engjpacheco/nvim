@@ -113,6 +113,20 @@ map('n', '<f1>', ':Dashboard<CR>',opts)
 map('n', '<f5>', ':CalendarH<CR>',opts)
 map('n', '<f12>', ':!python %<CR>',opts)
 
+-- hardmode no arrows allowed
+map('n', '<Up>', '<Nop>', opts)
+map('n', '<Down>', '<Nop>', opts)
+map('n', '<Left>', '<Nop>', opts)
+map('n', '<Right>', '<Nop>', opts)
+map('i', '<Up>', '<Nop>', opts)
+map('i', '<Down>', '<Nop>', opts)
+map('i', '<Left>', '<Nop>', opts)
+map('i', '<Right>', '<Nop>', opts)
+map('v', '<Up>', '<Nop>', opts)
+map('v', '<Down>', '<Nop>', opts)
+map('v', '<Left>', '<Nop>', opts)
+map('v', '<Right>', '<Nop>', opts)
+
 -- documents mardown and pdf
 map("n", '<leader>pdf', ":silent !silent  latexpdf % <CR>", opts)
 map("n", '<leader>md', ":MarkdownPreview<CR>", opts)

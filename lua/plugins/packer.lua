@@ -36,7 +36,6 @@ return packer.startup(function(use)
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-cmdline",
       "saadparwaiz1/cmp_luasnip",
-      "L3MON4D3/LuaSnip",
       "rafamadriz/friendly-snippets",
       "onsails/lspkind-nvim",
     },
@@ -48,6 +47,12 @@ return packer.startup(function(use)
   --   requires = "nvim-lua/plenary.nvim",
   --   config = get_config("null-ls"),
   -- })
+
+  use({ "L3MON4D3/LuaSnip",
+    requires = {},
+    -- run = ":TSUpdate",
+    config = get_config("luasnip"),
+  })
 
   use({ "nvim-treesitter/nvim-treesitter",
     requires = {},
