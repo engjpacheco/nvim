@@ -103,15 +103,20 @@ map('i', '<C-c', '<Esc>', opts)
 map('n', '<leader>ps', ':PackerSync<CR>', opts)
 map("n", '<M-x>', ":", opts) -- Meta X like emacs. This is blasphemy....
 map("n", '<leader>hrr', ":luafile%<CR>", opts)
-map("n", '<C-n>', ":enew<CR>", opts) -- Meta X like emacs. This is blasphemy....
+map("n", '<C-n>', ":enew<CR>", opts)
 map('i', 'jk', '<Esc>l', opts)
 map('i', 'jj', '<Esc>l', opts)
 map('i', 'aa', '<Esc>A', opts)
 map('i', 'qw', '<Esc>$', opts)
+map('n', 'cw', 'ciw', opts)
+map('n', 'vw', 'viw', opts)
 map('n', '<esc>', ':noh<return><esc>', opts)
 map('n', '<f1>', ':Dashboard<CR>',opts)
 map('n', '<f5>', ':CalendarH<CR>',opts)
 map('n', '<f12>', ':!python %<CR>',opts)
+map('n', '<f10>', ':setlocal spell! spelllang=es<CR>',opts)
+map('n', '<f9>', ':setlocal spell! spelllang=en<CR>',opts)
+map('i', '>', '<C-x>s', opts)
 
 -- hardmode no arrows allowed
 map('n', '<Up>', '<Nop>', opts)
@@ -127,13 +132,14 @@ map('v', '<Down>', '<Nop>', opts)
 map('v', '<Left>', '<Nop>', opts)
 map('v', '<Right>', '<Nop>', opts)
 
--- documents mardown and pdf
-map("n", '<leader>pdf', ":silent !silent  latexpdf % <CR>", opts)
+-- documents markdown and pdf
+map("n", '<leader>pdf', ":silent ! latexpdf % <CR>", opts)
 map("n", '<leader>md', ":MarkdownPreview<CR>", opts)
-map("n", '<leader>cx', ":MkdnToggleToDo<CR>", opts)
+map("n", '<leader>doc', ":silent ! pandoc % --pdf-engine=xelatex --template eisvogel.tex -o %.pdf<CR>", opts)
 
+-- open my main notes file
 if os == "Windows_NT" then
-  map("n", '<leader>ww', ":e ~/Appdata/local/nvim/notes/index.md<CR> :cd<CR>", opts)
+  map("n", '<leader>ww', ":e ~/Appdata/Local/nvim/notes/index.md<CR> :cd<CR>", opts)
 elseif os == "Linux" then
   map("n", '<leader>ww', ":e ~/.config/nvim/notes/index.md<CR> :cd<CR>", opts)
 end

@@ -41,6 +41,7 @@ M.setup = function()
   require("catppuccino").load()
   vim.cmd(':hi clear CursorLine')
   vim.cmd(':hi CursorLine gui=underline cterm=underline ctermfg=None guifg=None')
+  vim.cmd(':hi CursorLineNr gui=underline cterm=underline ctermfg=None guifg=None')
 end
 
 return M

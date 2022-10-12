@@ -39,6 +39,9 @@ set.colorcolumn = "81"
 set.conceallevel = 2
 set.autochdir = true
 
+-- Spellcheck settings
+vim.cmd[[set spellsuggest=best,10]]
+
 -- Disable loading certain plugins
 
 -- Whether to load netrw by default, see https://github.com/bling/dotvim/issues/4
