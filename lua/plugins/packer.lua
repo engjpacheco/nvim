@@ -35,6 +35,7 @@ return packer.startup(function(use)
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-cmdline",
+      "f3fora/cmp-spell",
       "saadparwaiz1/cmp_luasnip",
       "rafamadriz/friendly-snippets",
       "onsails/lspkind-nvim",
@@ -182,6 +183,23 @@ return packer.startup(function(use)
     rocks = 'luautf8', -- Ensures optional luautf8 dependency is installed
     config = get_config("mkdnflow"),
   })
+
+  use({ "folke/zen-mode.nvim",
+    requires = {},
+    config = get_config("zenmode"),
+  })
+
+  use {
+    "folke/twilight.nvim",
+    config = function()
+      require("twilight").setup {
+      }
+    end
+  }
+
+  use({"tjdevries/colorbuddy.nvim"})
+
+  use({"marko-cerovac/material.nvim"})
 
   -- Plugins Ends
   if Packer_Bootstrap then

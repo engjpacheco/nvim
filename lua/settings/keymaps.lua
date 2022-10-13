@@ -116,7 +116,7 @@ map('n', '<f5>', ':CalendarH<CR>',opts)
 map('n', '<f12>', ':!python %<CR>',opts)
 map('n', '<f10>', ':setlocal spell! spelllang=es<CR>',opts)
 map('n', '<f9>', ':setlocal spell! spelllang=en<CR>',opts)
-map('i', '>', '<C-x>s', opts)
+map('i', '<M->>', '<C-x>s', opts)
 
 -- hardmode no arrows allowed
 map('n', '<Up>', '<Nop>', opts)
@@ -136,6 +136,8 @@ map('v', '<Right>', '<Nop>', opts)
 map("n", '<leader>pdf', ":silent ! latexpdf % <CR>", opts)
 map("n", '<leader>md', ":MarkdownPreview<CR>", opts)
 map("n", '<leader>doc', ":silent ! pandoc % --pdf-engine=xelatex --template eisvogel.tex -o %.pdf<CR>", opts)
+map("n", '<f6>', ":ZenMode<CR>", opts)
+map("n", '<f7>', ":Twilight<CR>", opts)
 
 -- open my main notes file
 if os == "Windows_NT" then
@@ -143,5 +145,4 @@ if os == "Windows_NT" then
 elseif os == "Linux" then
   map("n", '<leader>ww', ":e ~/.config/nvim/notes/index.md<CR> :cd<CR>", opts)
 end
-
 
