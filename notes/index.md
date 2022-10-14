@@ -14,7 +14,8 @@ es muy "minimalista" por lo cual requerira de algunas modificaciones.
 #### herramientas.
 1. ***neovim*** 
   - plugin: [mkdflow](202210020921_mkdflow.md).nvim
-2. tmux (maybe).
+2. tmux.
+3. [Excalidraw](www.excalidraw.com)
 
 *thats it, im ready to go.*
 
