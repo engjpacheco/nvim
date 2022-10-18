@@ -32,7 +32,7 @@ local lazygit = Terminal:new({ cmd = "lazygit", count=5, hidden = true })
 function _lazygit_toggle()
   lazygit:toggle()
 end
-vim.api.nvim_set_keymap("n", "<F2>", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
 
 local python = Terminal:new({ cmd = "python", count=5, hidden = true })
 function _python_toggle()
